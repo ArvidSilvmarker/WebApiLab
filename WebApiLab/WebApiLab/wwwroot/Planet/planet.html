@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>PlanetModulifier</title>
+</head>
+<body>
+    
+<h3>Spann</h3>
+<form method="get" action="/api/ex2/span">
+    Från: <input name="From" value="1" />
+    Till: <input name="To" value="10" />
+    <button>Visa alla siffror</button>
+</form>
+
+<h3>Kvadera</h3>
+    <form method="get" action="/api/ex2/quad">
+        Nuffra: <input name="Number" value="10" />
+        <button>Kvadrera</button>
+    </form>
+
+    <h3>Coolor</h3>
+    <form method="get" action="/api/ex2/Coolor">
+        Färg: <input name="color" value="Red" />
+        <button>Byt färg</button>
+    </form>
+
+    <h3>Frukost</h3>
+    <form method="get" action="/api/ex2/Frukost">
+        Frukost: <input name="Food" value="Eggs" />
+        <button>Validera frukost</button>
+    </form>
+
+    <h3>Post formulär till AddPlanet</h3>
+    <form method="post" action="/api/ex0/AddPlanet">
+        Planet: <input name="Planet" value="Saturnus" />
+        Storlek: <input name="Size" value="100" />
+        <button>Ok</button>
+    </form>
+    <br>
+
+    <h3>Get formulär till ReadPlanet</h3>
+    <form method="get" action="/api/ex0/ReadPlanet">
+        Planet: <input name="Planet" value="Saturnus" />
+        Storlek: <input name="Size" value="100" />
+        <button>Ok</button>
+    </form>
+
+    <body>
+        <h3>Post formulär till AddPlanet2</h3>
+
+        <form method="post" action="/api/ex0/AddPlanet2">
+            Planet: <input name="Name" value="Saturnus" />
+            Storlek: <input name="Size" value="100" />
+            <button>Ok</button>
+        </form>
+        <br>
+
+        <h3>Get formulär till ReadPlanet2</h3>
+        <form method="get" action="/api/ex0/ReadPlanet2">
+            Planet: <input name="Name" value="Saturnus" />
+            Storlek: <input name="Size" value="100" />
+            <button>Ok</button>
+        </form>
+
+
+
+        <hr />
+    </body>
+</html>
