@@ -5,15 +5,46 @@
     <title>PlanetModulifier</title>
 </head>
 <body>
-    
-<h3>Spann</h3>
-<form method="get" action="/api/ex2/span">
-    Från: <input name="From" value="1" />
-    Till: <input name="To" value="10" />
-    <button>Visa alla siffror</button>
-</form>
+    <h3>Lampa</h3>
+    <form method="get" action="/api/ex3/lampa">
+        Lampa på: <input type="checkbox" name="lampa" id="lampa"  value="off" onclick="doalert(this)"/>
+        <script>function doalert(checkboxElem) {
+            if (checkboxElem.checked) {
+                checkboxElem.value="on";
+            } else {
+                checkboxElem.value="off";
+            }
+        }</script>
+        <!--<script>$(this).val($(this).is(":checked"));</script>-->
+        <button>Tryck</button>
+    </form>
 
-<h3>Kvadera</h3>
+    <h3>UserName</h3>
+    <form method="get" action="/api/ex3/userName">
+        UserName: <input name="UserName" value="" />
+        <button>Ok</button>
+    </form>
+    <h3>Order</h3>
+    <form method="get" action="/api/ex3/order">
+        Ordernummer: <input name="OrderNumber" value="AB-1234" />
+        <button>Sök i databas</button>
+    </form>
+
+    <h3>Choklad</h3>
+    <form method="get" action="/api/ex3/choklad">
+        Folk som ska dela på 25 choklad: <input name="NumberOfPeople" value="10" />
+        <button>Dela</button>
+    </form>
+
+
+    <h3>Spann</h3>
+    <form method="get" action="/api/ex2/span">
+        Från: <input name="From" value="1" />
+        Till: <input name="To" value="10" />
+        <button>Visa alla siffror</button>
+    </form>
+
+    <h3>Kvadera</h3>
     <form method="get" action="/api/ex2/quad">
         Nuffra: <input name="Number" value="10" />
         <button>Kvadrera</button>
