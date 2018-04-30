@@ -40,6 +40,7 @@ namespace News
             app.UseMvc();
             app.UseStaticFiles();
             app.UseStatusCodePages();
+            app.UseDirectoryBrowser();
         }
     }
 }

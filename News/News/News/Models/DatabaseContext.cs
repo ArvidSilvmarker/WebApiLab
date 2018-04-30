@@ -8,7 +8,7 @@ namespace News.Models
 {
     public class DatabaseContext : DbContext
     {
-        public DbSet<News> News { get; set; }
+        public DbSet<NewsArticle> News { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

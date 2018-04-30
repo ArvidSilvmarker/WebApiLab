@@ -4,10 +4,50 @@
     <title>news</title>
 </head>
 <body>
-<h1>Nyhetsdatabas</h1>
-<hr/>
-<h3>Seed</h3>
-<input type="button" id="seedbutton" name="Seed"/>
+    <h1>Nyhetsdatabas</h1>
+
+    <hr />
+    <h3>Seed</h3>
+    Töm databasen och lägg till nya nyheter.
+    <button id="seedbutton">Seed</button>
+
+    <hr />
+    <h3>Räkna</h3>
+    Räkna antalet artiklar.
+    <button id="countbutton">Räkna</button>
+
+    <hr />
+    <h3>Visa alla</h3>
+    Visa alla artikel.
+    <form action="/api/news/showall">
+        <input type="submit" value="Visa alla" />
+    </form>
+
+    <hr />
+    <h3>Lägg till</h3>
+    Lägg till artiklar.<br>
+    Titel:  <input id="title"/><br/>
+    Header: <input id="header"/><br/>
+    Body:   <input id="body"/><br/>
+    <button id="addbutton">Lägg till nyhet</button>
+
+    <hr />
+    <h3>Ta bort</h3>
+    Ta bort artikel: <input id="remove"/>
+    <button id="removebutton">Ta bort</button>
+
+    <hr />
+    <h3>Uppdatera</h3>
+    Uppdatera artikel.<br>
+    Id: <input id="updateid" /><br/>
+    Titel:  <input id="updatetitle"/><br/>
+    Header: <input id="updateheader"/><br/>
+    Body:   <input id="updatebody"/><br/>
+    <button id="updatebutton">Update</button>
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="/js/news.js"></script>
 
 </body>
 </html>
