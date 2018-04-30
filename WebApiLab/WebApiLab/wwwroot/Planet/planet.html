@@ -5,16 +5,41 @@
     <title>PlanetModulifier</title>
 </head>
 <body>
+
+    <h3>Validera person med attribut</h3>
+    <form method="post" action="/api/ex3/validatepersonattributes">
+        Förnamn: <input name="Name" value="" />
+        Ålder: <input name="Age" value="" />
+        <button>Validera person</button>
+    </form>
+
+    <h3>Validera person</h3>
+    <form method="post" action="/api/ex3/validateperson">
+        Förnamn: <input name="Name" value="" />
+        Ålder: <input name="Age" value="" />
+        <button>Validera person</button>
+    </form>
+
+
+
+    <h3>Lägg till person</h3>
+    <form method="post" action="/api/ex3/addperson">
+        Förnamn: <input name="Name" value="" />
+        Ålder: <input name="Age" value="" />
+        <button>Registrera person</button>
+    </form>
+
     <h3>Lampa</h3>
     <form method="get" action="/api/ex3/lampa">
-        Lampa på: <input type="checkbox" name="lampa" id="lampa"  value="off" onclick="doalert(this)"/>
-        <script>function doalert(checkboxElem) {
-            if (checkboxElem.checked) {
-                checkboxElem.value="on";
-            } else {
-                checkboxElem.value="off";
-            }
-        }</script>
+        Lampa på: <input type="checkbox" name="lampa" id="lampa" value="off" onclick="doalert(this)" />
+        <script>
+            function doalert(checkboxElem) {
+                if (checkboxElem.checked) {
+                    checkboxElem.value = "on";
+                } else {
+                    checkboxElem.value = "off";
+                }
+            }</script>
         <!--<script>$(this).val($(this).is(":checked"));</script>-->
         <button>Tryck</button>
     </form>
