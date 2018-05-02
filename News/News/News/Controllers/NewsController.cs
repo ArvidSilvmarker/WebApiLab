@@ -107,31 +107,20 @@ namespace News.Controllers
         [Route("update"), HttpPost]
         public IActionResult Update(NewsArticle updatedArticle)
         {
-            //if (!ModelState.IsValid)
-            //{
-            //    return BadRequest(ModelState);
-            //}
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
 
-            NewsArticle currentArticle = _newsRepository.Find(updatedArticle.Id);
-            if (currentArticle == null)
-                return BadRequest($"Hittade inte artikel med ID: {updatedArticle.Id}");
-
-            if (string.IsNullOrWhiteSpace(updatedArticle.Title))
-                updatedArticle.Title = currentArticle.Title;
-
-            if (string.IsNullOrWhiteSpace(updatedArticle.Body))
-                updatedArticle.Body = currentArticle.Body;
-
-            if (string.IsNullOrWhiteSpace(updatedArticle.Header))
-                updatedArticle.Header = currentArticle.Header;
 
             try
             {
                 _newsRepository.Update(updatedArticle);
             }
-            catch
+            catch (Exception exception)
             {
-                return BadRequest("Gick inte att uppdatera.");
+                Console.WriteLine(exception.Message);
+                return BadRequest(exception.Message);
             }
 
             return Ok($"Updaterade artikeln med ID: {updatedArticle.Id}");

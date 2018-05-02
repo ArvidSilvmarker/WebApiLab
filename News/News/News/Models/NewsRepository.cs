@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace News.Models
 {
@@ -13,8 +14,7 @@ namespace News.Models
 
         public void ClearAll()
         {
-            context.Database.EnsureDeleted();
-            context.Database.EnsureCreated();
+            context.RemoveRange(context.News);
         }
 
         public void Add(NewsArticle news)
@@ -46,8 +46,11 @@ namespace News.Models
 
         public void Update(NewsArticle article)
         {
-            article.ChangedDate = DateTime.Now;
-            context.News.Update(article);
+            var temp = context.News.SingleOrDefault(s => s.Id == article.Id);
+            temp.ChangedDate = DateTime.Now;
+            temp.Title = article.Title;
+            temp.Header = article.Header;
+            temp.Body = article.Body;
             context.SaveChanges();
         }
 

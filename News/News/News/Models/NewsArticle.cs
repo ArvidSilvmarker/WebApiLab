@@ -11,7 +11,7 @@ namespace News.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Måste ha en titel.")]
-        [Range(5, 20, ErrorMessage="Titeln måste vara 5-20 tecken lång.")]
+        //[Range(5, 20, ErrorMessage="Titeln måste vara 5-20 tecken lång.")]
         public string Title { get; set; }
 
         [Required(ErrorMessage = "Måste ha en header.")]
